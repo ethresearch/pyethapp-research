@@ -6,8 +6,8 @@ WORKDIR /ethereum
 RUN git clone https://github.com/ethereum/viper.git &&\
     cd viper && python setup.py develop
 RUN git clone https://github.com/karlfloersch/pyethereum.git &&\
-    cd pyethereum && git submodule update --init casper &&\
-    python setup.py develop
-RUN git clone https://github.com/karlfloersch/pyethapp.git &&\
-    cd pyethapp && python setup.py develop
+    cd pyethereum && git submodule update --init casper
+RUN git clone https://github.com/karlfloersch/pyethapp.git
 
+RUN cd pyethapp && python setup.py develop
+RUN cd pyethereum && python setup.py develop
