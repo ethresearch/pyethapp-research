@@ -18,7 +18,7 @@ RUN python3.6 -m pip install wheel
 RUN ln -sf /usr/local/bin/pip3.6 /usr/local/bin/pip \
     && ln -sf /usr/bin/python3.6 /usr/local/bin/python \
     && pip install -U pip
-RUN pip install coincurve==6.0.0 web3
+RUN pip install coincurve==6.0.0 web3 tinyrpc==0.6
 
 # Clone and install (editable) required repositories
 WORKDIR /ethereum
