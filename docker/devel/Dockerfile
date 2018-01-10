@@ -26,6 +26,6 @@ RUN git clone https://github.com/ethereum/viper.git
 RUN git clone https://github.com/karlfloersch/pyethereum.git &&\
     cd pyethereum && git submodule update --init casper
 RUN git clone https://github.com/karlfloersch/pyethapp.git
-RUN cd viper && python setup.py develop
+RUN cd viper && git reset --hard 9be3ac1945ab98c932ec769274965e9bb0536bb2 && python setup.py develop
 RUN cd pyethapp && python setup.py develop
 RUN cd pyethereum && python setup.py develop

@@ -7,7 +7,9 @@ RUN pip install --no-cache-dir setuptools==37.0.0
 
 WORKDIR /ethereum
 RUN git clone https://github.com/ethereum/viper.git &&\
-    cd viper && python setup.py develop
+    cd viper &&\
+    git reset --hard 9be3ac1945ab98c932ec769274965e9bb0536bb2 &&\
+    python setup.py develop
 RUN git clone https://github.com/karlfloersch/pyethereum.git &&\
     cd pyethereum && git submodule update --init casper
 RUN git clone https://github.com/karlfloersch/pyethapp.git
