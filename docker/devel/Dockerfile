@@ -25,7 +25,7 @@ WORKDIR /ethereum
 RUN git clone https://github.com/ethereum/viper.git
 RUN git clone https://github.com/karlfloersch/pyethereum.git &&\
     cd pyethereum && git submodule update --init casper
-RUN git clone https://github.com/karlfloersch/pyethapp.git -b no-dao-challenge
+RUN git clone https://github.com/karlfloersch/pyethapp.git -b beta-testnet
 RUN git clone https://github.com/ChihChengLiang/pydevp2p.git
 
 
